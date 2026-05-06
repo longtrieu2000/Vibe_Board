@@ -3,8 +3,15 @@ import type { Route } from './+types/not-found';
 import { useNavigate } from 'react-router';
 import { useCallback, useEffect, useState } from 'react';
 
+export const prerender = false;
+
 export async function loader({ params }: Route.LoaderArgs) {
-  const matches = await fg('src/**/page.{js,jsx,ts,tsx}');
+  let matches: string[] = [];
+  if (import.meta.env.DEV) {
+    try {
+      matches = await fg('src/**/page.{js,jsx,ts,tsx}');
+    } catch (e) {}
+  }
   return {
     path: `/${params['*']}`,
     pages: matches

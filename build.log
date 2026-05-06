@@ -1,0 +1,276 @@
+--progress is a global compose flag, better use `docker compose --progress xx build ...
+time="2026-05-05T15:40:39+07:00" level=warning msg="/home/longth1/workspace/ViralBoard/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Image viralboard-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 572B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.64kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/oven/bun:1
+#3 DONE 1.0s
+
+#4 [internal] load metadata for docker.io/library/node:20-slim
+#4 DONE 1.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 DONE 0.0s
+
+#7 [runner 1/5] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
+#7 resolve docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0 0.1s done
+#7 DONE 0.1s
+
+#8 [deps 1/4] FROM docker.io/oven/bun:1@sha256:87416c977a612a204eb54ab9f3927023c2a3c971f4f345a01da08ea6262ae30e
+#8 resolve docker.io/oven/bun:1@sha256:87416c977a612a204eb54ab9f3927023c2a3c971f4f345a01da08ea6262ae30e
+#8 resolve docker.io/oven/bun:1@sha256:87416c977a612a204eb54ab9f3927023c2a3c971f4f345a01da08ea6262ae30e 0.1s done
+#8 DONE 0.1s
+
+#9 [runner 2/5] WORKDIR /app
+#9 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 9.04kB 0.0s done
+#6 DONE 0.0s
+
+#10 [deps 4/4] RUN bun install --frozen-lockfile
+#10 CACHED
+
+#11 [builder 3/5] COPY --from=deps /app/node_modules ./node_modules
+#11 CACHED
+
+#12 [deps 2/4] WORKDIR /app
+#12 CACHED
+
+#13 [deps 3/4] COPY package.json bun.lock ./
+#13 CACHED
+
+#14 [builder 4/5] COPY . .
+#14 CACHED
+
+#15 [builder 5/5] RUN bun run build
+#15 0.254 $ SKIP_SERVER_LISTEN=1 react-router build
+#15 1.908 vite v6.4.1 building for production...
+#15 2.008 transforming...
+#15 6.295 ✓ 1786 modules transformed.
+#15 6.476 rendering chunks...
+#15 6.620 computing gzip size...
+#15 6.658 build/client/.vite/manifest.json                  7.90 kB │ gzip:  0.94 kB
+#15 6.658 build/client/assets/root-C1FFUEEz.css            35.30 kB │ gzip:  6.66 kB
+#15 6.659 build/client/assets/index-B13oh12A.js             0.36 kB │ gzip:  0.25 kB
+#15 6.659 build/client/assets/x-DfoCKJA3.js                 0.51 kB │ gzip:  0.35 kB
+#15 6.659 build/client/assets/grid-3x3-CKbGW4uH.js          0.65 kB │ gzip:  0.41 kB
+#15 6.659 build/client/assets/page-BW8Kl4gm.js              0.98 kB │ gzip:  0.41 kB
+#15 6.659 build/client/assets/page-BJUbPdxy.js              0.99 kB │ gzip:  0.41 kB
+#15 6.659 build/client/assets/page-CdziAQPT.js              0.99 kB │ gzip:  0.41 kB
+#15 6.659 build/client/assets/page-DphAvd-E.js              1.01 kB │ gzip:  0.43 kB
+#15 6.659 build/client/assets/page-BujouOen.js              1.02 kB │ gzip:  0.43 kB
+#15 6.659 build/client/assets/page-CtxPEGC6.js              1.03 kB │ gzip:  0.44 kB
+#15 6.659 build/client/assets/page-CmcfeS-a.js              1.04 kB │ gzip:  0.45 kB
+#15 6.659 build/client/assets/page-Dcz5shha.js              1.06 kB │ gzip:  0.46 kB
+#15 6.659 build/client/assets/page-C82r0tuU.js              1.08 kB │ gzip:  0.46 kB
+#15 6.659 build/client/assets/page-BPE4Wsyq.js              1.29 kB │ gzip:  0.54 kB
+#15 6.659 build/client/assets/page-DSICEFSG.js              1.39 kB │ gzip:  0.44 kB
+#15 6.659 build/client/assets/video-DLx0M6Li.js             2.64 kB │ gzip:  0.88 kB
+#15 6.659 build/client/assets/page-CoK0BQuR.js              3.96 kB │ gzip:  1.63 kB
+#15 6.659 build/client/assets/page-C8A4mUQR.js              5.04 kB │ gzip:  1.80 kB
+#15 6.659 build/client/assets/not-found-DLIDq-Nn.js         5.06 kB │ gzip:  1.92 kB
+#15 6.659 build/client/assets/react-B3i5ugJm.js             7.49 kB │ gzip:  2.88 kB
+#15 6.660 build/client/assets/entry.client-wcQyXEIY.js      7.97 kB │ gzip:  2.80 kB
+#15 6.660 build/client/assets/page-DKWIZn8w.js             15.05 kB │ gzip:  3.70 kB
+#15 6.660 build/client/assets/layout-eiD1JWd0.js           31.26 kB │ gzip:  7.69 kB
+#15 6.660 build/client/assets/root-IJK4jWXm.js            117.50 kB │ gzip: 32.40 kB
+#15 6.660 build/client/assets/page-CMjoRVVI.js            121.34 kB │ gzip: 26.40 kB
+#15 6.660 build/client/assets/chunk-LFPYN7LY-Ba6Slydt.js  126.65 kB │ gzip: 42.55 kB
+#15 6.660 build/client/assets/index-DBESeBSW.js           135.68 kB │ gzip: 44.01 kB
+#15 6.662 ✓ built in 4.69s
+#15 6.921 vite v6.4.1 building SSR bundle for production...
+#15 6.970 transforming...
+#15 7.380 src/app/shared/[token]/page.jsx?noLayout.jsx (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#15 7.383 src/app/page.jsx?noLayout.jsx (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#15 7.386 src/app/board/[id]/page.jsx?noLayout.jsx (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#15 7.394 src/app/__create/social-dev-shim/page.jsx?noLayout.jsx (1:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+#15 7.779 "getContext" is imported from external module "hono/context-storage" but never used in "__create/index.ts".
+#15 7.780 ✓ 101 modules transformed.
+#15 7.817 rendering chunks...
+#15 7.843 build/server/.vite/manifest.json                 0.80 kB
+#15 7.843 build/server/assets/server-build-C1FFUEEz.css   35.30 kB
+#15 7.843 build/server/index.js                            0.61 kB
+#15 7.843 build/server/assets/node-Ci53GDiT.js             5.76 kB
+#15 7.843 build/server/assets/index-DZAtsG2C.js           57.01 kB
+#15 7.843 build/server/assets/server-build.js            220.72 kB
+#15 7.844 
+#15 7.844 ✓ 1 asset cleaned from React Router server build.
+#15 7.844 build/server/assets/server-build-C1FFUEEz.css
+#15 7.844 
+#15 8.093 serveStatic: root path './public' is not found, are you sure it's correct?
+#15 8.147 Prerender (data): /*? -> build/client/*?.data
+#15 8.153 5954 |   }
+#15 8.153 5955 |   let line;
+#15 8.153 5956 |   try {
+#15 8.153 5957 |     line = JSON.parse(read.value);
+#15 8.153 5958 |   } catch (reason) {
+#15 8.153 5959 |     throw new SyntaxError();
+#15 8.153                      ^
+#15 8.153 SyntaxError: 
+#15 8.153       at decodeInitial (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:5959:15)
+#15 8.153       at async decode (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:5933:39)
+#15 8.153       at async <anonymous> (/app/node_modules/react-router/dist/development/index.js:732:69)
+#15 8.153       at async <anonymous> (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:4809:91)
+#15 8.153       at async callLoaderOrAction (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:4861:22)
+#15 8.153       at async defaultDataStrategy (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:4486:31)
+#15 8.153       at async callDataStrategyImpl (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:4755:23)
+#15 8.153       at async callDataStrategy (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:3793:25)
+#15 8.153       at async loadRouteData (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:3770:25)
+#15 8.153       at async queryImpl (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:3545:26)
+#15 8.153       at async query (/app/node_modules/react-router/dist/development/chunk-XOLAXE2Z.js:3407:24)
+#15 8.153       at async handleDocumentRequest (/app/node_modules/react-router/dist/development/index.js:1517:38)
+#15 8.153       at async <anonymous> (/app/node_modules/react-router/dist/development/index.js:1378:24)
+#15 8.153 
+#15 8.169 ✗ Build failed in 1.25s
+#15 8.170 4951 |     Redirecting from <code>${normalizedPath}</code> to <code>${location}</code>
+#15 8.170 4952 |   </a>
+#15 8.170 4953 | </body>
+#15 8.170 4954 | </html>`;
+#15 8.170 4955 |   } else if (response.status !== 200) {
+#15 8.170 4956 |     throw new Error(
+#15 8.170                     ^
+#15 8.170 error: [react-router] Prerender (html): Received a 500 status code from `entry.server.tsx` while prerendering the `/*?/` path.
+#15 8.170 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/root-C1FFUEEz.css"/><script type="module" src="/src/__create/dev-error-overlay.js"></script><link rel="icon" href="/src/__create/favicon.png"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=block"/></head><body><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section><script>((storageKey2, restoreKey) => {
+#15 8.170       if (!window.history.state || !window.history.state.key) {
+#15 8.170         let key = Math.random().toString(32).slice(2);
+#15 8.170         window.history.replaceState({ key }, "");
+#15 8.170       }
+#15 8.170       try {
+#15 8.170         let storedY = JSON.parse(sessionStorage.getItem(storageKey2) || "{}")[restoreKey || window.history.state.key];
+#15 8.170         if (typeof storedY === "number")
+#15 8.170           window.scrollTo(0, storedY);
+#15 8.170       } catch (error) {
+#15 8.170         console.error(error);
+#15 8.170         sessionStorage.removeItem(storageKey2);
+#15 8.170       }
+#15 8.170     })("react-router-scroll-positions", null)</script><link rel="modulepreload" href="/assets/entry.client-wcQyXEIY.js"/><link rel="modulepreload" href="/assets/chunk-LFPYN7LY-Ba6Slydt.js"/><link rel="modulepreload" href="/assets/index-DBESeBSW.js"/><link rel="modulepreload" href="/assets/root-IJK4jWXm.js"/><link rel="modulepreload" href="/assets/index-B13oh12A.js"/><link rel="modulepreload" href="/assets/react-B3i5ugJm.js"/><link rel="modulepreload" href="/assets/not-found-DLIDq-Nn.js"/><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"unstable_subResourceIntegrity":false,"unstable_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"lazy","manifestPath":"/__manifest"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">;
+#15 8.170 import * as route0 from "/assets/root-IJK4jWXm.js";
+#15 8.170 import * as route1 from "/assets/not-found-DLIDq-Nn.js";
+#15 8.170   window.__reactRouterManifest = {
+#15 8.170   "entry": {
+#15 8.170     "module": "/assets/entry.client-wcQyXEIY.js",
+#15 8.170     "imports": [
+#15 8.170       "/assets/chunk-LFPYN7LY-Ba6Slydt.js",
+#15 8.170       "/assets/index-DBESeBSW.js"
+#15 8.170     ],
+#15 8.170     "css": []
+#15 8.170   },
+#15 8.170   "routes": {
+#15 8.170     "root": {
+#15 8.170       "id": "root",
+#15 8.170       "path": "",
+#15 8.170       "hasAction": false,
+#15 8.170       "hasLoader": false,
+#15 8.170       "hasClientAction": false,
+#15 8.170       "hasClientLoader": false,
+#15 8.170       "hasClientMiddleware": false,
+#15 8.170       "hasDefaultExport": true,
+#15 8.170       "hasErrorBoundary": true,
+#15 8.170       "module": "/assets/root-IJK4jWXm.js",
+#15 8.170       "imports": [
+#15 8.170         "/assets/chunk-LFPYN7LY-Ba6Slydt.js",
+#15 8.170         "/assets/index-DBESeBSW.js",
+#15 8.170         "/assets/index-B13oh12A.js",
+#15 8.170         "/assets/react-B3i5ugJm.js"
+#15 8.170       ],
+#15 8.170       "css": [
+#15 8.170         "/assets/root-C1FFUEEz.css"
+#15 8.170       ]
+#15 8.170     },
+#15 8.170     "__create/not-found": {
+#15 8.170       "id": "__create/not-found",
+#15 8.170       "parentId": "root",
+#15 8.170       "path": "*?",
+#15 8.170       "hasAction": false,
+#15 8.170       "hasLoader": true,
+#15 8.170       "hasClientAction": false,
+#15 8.170       "hasClientLoader": false,
+#15 8.170       "hasClientMiddleware": false,
+#15 8.170       "hasDefaultExport": true,
+#15 8.170       "hasErrorBoundary": false,
+#15 8.170       "module": "/assets/not-found-DLIDq-Nn.js",
+#15 8.170       "imports": [
+#15 8.170         "/assets/index-B13oh12A.js",
+#15 8.170         "/assets/chunk-LFPYN7LY-Ba6Slydt.js"
+#15 8.170       ],
+#15 8.170       "css": []
+#15 8.170     },
+#15 8.170     "page": {
+#15 8.170       "id": "page",
+#15 8.170       "parentId": "root",
+#15 8.170       "index": true,
+#15 8.170       "hasAction": false,
+#15 8.170       "hasLoader": false,
+#15 8.170       "hasClientAction": false,
+#15 8.170       "hasClientLoader": false,
+#15 8.170       "hasClientMiddleware": false,
+#15 8.170       "hasDefaultExport": true,
+#15 8.170       "hasErrorBoundary": false,
+#15 8.170       "module": "/assets/page-DKWIZn8w.js",
+#15 8.170       "imports": [
+#15 8.170         "/assets/index-B13oh12A.js",
+#15 8.170         "/assets/chunk-LFPYN7LY-Ba6Slydt.js",
+#15 8.170         "/assets/layout-eiD1JWd0.js",
+#15 8.170         "/assets/x-DfoCKJA3.js",
+#15 8.170         "/assets/video-DLx0M6Li.js",
+#15 8.170         "/assets/grid-3x3-CKbGW4uH.js"
+#15 8.170       ],
+#15 8.170       "css": []
+#15 8.170     }
+#15 8.170   },
+#15 8.170   "url": "/assets/manifest-df301517.js",
+#15 8.170   "version": "df301517"
+#15 8.170 };
+#15 8.170   window.__reactRouterRouteModules = {"root":route0,"__create/not-found":route1};
+#15 8.170 
+#15 8.170 import("/assets/entry.client-wcQyXEIY.js");</script><script src="https://kit.fontawesome.com/2c15cc0cc7.js" crossorigin="anonymous" async=""></script></body></html><!--$?--><template id="B:0"></template><!--/$--><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":5},\"loaderData\",{},\"actionData\",\"errors\",{\"_6\":7},\"root\",{\"_8\":9,\"_10\":-7,\"_11\":12},\"message\",\"Unexpected Server Error\",\"stack\",\"__type\",\"Error\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>function $RC(a,b){a=document.getElementById(a);b=document.getElementById(b);b.parentNode.removeChild(b);if(a){a=a.previousSibling;var f=a.parentNode,c=a.nextSibling,e=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d)if(0===e)break;else e--;else"$"!==d&&"$?"!==d&&"$!"!==d||e++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;b.firstChild;)f.insertBefore(b.firstChild,c);a.data="$";a._reactRetry&&a._reactRetry()}};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script>
+#15 8.170  plugin: "react-router",
+#15 8.170    hook: "writeBundle",
+#15 8.170    code: "PLUGIN_ERROR"
+#15 8.170 
+#15 8.170       at prerenderRoute (/app/node_modules/@react-router/dev/dist/vite.js:4956:14)
+#15 8.170 
+#15 8.212 error: script "build" exited with code 1
+#15 ERROR: process "/bin/sh -c bun run build" did not complete successfully: exit code: 1
+------
+ > [builder 5/5] RUN bun run build:
+8.170   window.__reactRouterRouteModules = {"root":route0,"__create/not-found":route1};
+8.170 
+8.170 import("/assets/entry.client-wcQyXEIY.js");</script><script src="https://kit.fontawesome.com/2c15cc0cc7.js" crossorigin="anonymous" async=""></script></body></html><!--$?--><template id="B:0"></template><!--/$--><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":5},\"loaderData\",{},\"actionData\",\"errors\",{\"_6\":7},\"root\",{\"_8\":9,\"_10\":-7,\"_11\":12},\"message\",\"Unexpected Server Error\",\"stack\",\"__type\",\"Error\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>function $RC(a,b){a=document.getElementById(a);b=document.getElementById(b);b.parentNode.removeChild(b);if(a){a=a.previousSibling;var f=a.parentNode,c=a.nextSibling,e=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d)if(0===e)break;else e--;else"$"!==d&&"$?"!==d&&"$!"!==d||e++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;b.firstChild;)f.insertBefore(b.firstChild,c);a.data="$";a._reactRetry&&a._reactRetry()}};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script>
+8.170  plugin: "react-router",
+8.170    hook: "writeBundle",
+8.170    code: "PLUGIN_ERROR"
+8.170 
+8.170       at prerenderRoute (/app/node_modules/@react-router/dev/dist/vite.js:4956:14)
+8.170 
+8.212 error: script "build" exited with code 1
+------
+Dockerfile:34
+
+--------------------
+
+  32 |     ENV ANYTHING_PROJECT_TOKEN=$ANYTHING_PROJECT_TOKEN
+
+  33 |     
+
+  34 | >>> RUN bun run build
+
+  35 |     
+
+  36 |     # ========================================
+
+--------------------
+
+failed to solve: process "/bin/sh -c bun run build" did not complete successfully: exit code: 1
+

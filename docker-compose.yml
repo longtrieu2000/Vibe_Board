@@ -1,0 +1,53 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: localpassword
+      POSTGRES_DB: vibeboarddb
+    ports:
+      - "5435:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      # Mount schema files to initialize the database
+      - ./anything-viralboard-db/development.sql:/docker-entrypoint-initdb.d/01-development.sql
+      - ./anything-viralboard-db/02-auth-tables.sql:/docker-entrypoint-initdb.d/02-auth-tables.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d vibeboarddb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: ./vibe_board/anything/apps/web
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3038:4000" # Host 3038 -> Container 4000
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:localpassword@db:5432/vibeboarddb
+      - NEXT_PUBLIC_CREATE_ENV=DEVELOPMENT
+      - NEXT_PUBLIC_APP_URL=http://localhost:3038
+      - NEXT_PUBLIC_BASE_URL=http://localhost:3038
+      - NEXT_PUBLIC_HOST=localhost:3038
+      - AUTH_URL=http://localhost:3038
+      - AUTH_SECRET=my_super_secret_for_local_dev_12345
+      - ANYTHING_PROJECT_TOKEN=local_project_token
+    volumes:
+      # Persist logs on host for debugging even when container is stopped/crashed
+      - ./logs/web:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    # Keep stdout/stderr logs accessible via `docker logs`
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  db_data:

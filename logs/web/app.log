@@ -6925,3 +6925,1063 @@ DATABASE_URL is set: yes
 🚀 Server started on port 4000
 🌍 http://127.0.0.1:4000
 🏎️ Server started in 364ms
+[traceId:953f5a63-6e6b-4f32-a9c0-100181da27cf] [31m[auth][error][0m UnknownAction: Cannot parse action at /api/auth/session. Read more at https://errors.authjs.dev#unknownaction
+[traceId:953f5a63-6e6b-4f32-a9c0-100181da27cf]     at parseActionAndProviderId (file:///app/node_modules/@auth/core/lib/utils/web.js:98:15)
+    at toInternalRequest (file:///app/node_modules/@auth/core/lib/utils/web.js:25:40)
+    at Auth (file:///app/node_modules/@auth/core/index.js:68:35)
+    at file:///app/node_modules/@hono/auth-js/dist/index.js:84:21
+    at file:///app/build/server/index.js:1957:25
+    at dispatch (file:///app/node_modules/hono/dist/compose.js:22:23)
+    at file:///app/node_modules/hono/dist/compose.js:22:46
+    at file:///app/node_modules/@hono/auth-js/dist/index.js:74:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+[traceId:bc1d86db-f9e6-4261-b2dd-c19af4a0e20c] Error fetching boards: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.GET$1 [as GET] (file:///app/build/server/index.js:1431:20)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.GET$1 [as GET] (file:///app/build/server/index.js:1431:20)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:e6e911f6-1e55-4a5b-ba50-98a5cf42cd00] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:7d115c7c-8043-4ab3-8f7e-d565572eef24] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:c5066059-2b3c-4edf-b355-513efd066cc0] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:b7726cb6-4184-4799-a82b-274113d7c920] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:86851213-5737-43fb-9cea-88eecbfcc568] [31m[auth][error][0m UnknownAction: Cannot parse action at /api/auth/session. Read more at https://errors.authjs.dev#unknownaction
+[traceId:86851213-5737-43fb-9cea-88eecbfcc568]     at parseActionAndProviderId (file:///app/node_modules/@auth/core/lib/utils/web.js:98:15)
+    at toInternalRequest (file:///app/node_modules/@auth/core/lib/utils/web.js:25:40)
+    at Auth (file:///app/node_modules/@auth/core/index.js:68:35)
+    at file:///app/node_modules/@hono/auth-js/dist/index.js:84:21
+    at file:///app/build/server/index.js:1957:25
+    at dispatch (file:///app/node_modules/hono/dist/compose.js:22:23)
+    at file:///app/node_modules/hono/dist/compose.js:22:46
+    at file:///app/node_modules/@hono/auth-js/dist/index.js:74:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+[traceId:094a6584-e2e9-4072-ae22-b9f8df54acbb] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:121d64e8-8620-4f2f-8655-8e627709cbd3] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:df72a726-d564-403e-8f58-48a2a231712e] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:265173bd-8cb3-4b39-aee3-7d6e14408ec4] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:cbeb31a2-8438-40c6-a4ff-3a6da87370c4] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:64fab03d-534b-4647-a63b-1dec593b73b5] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:8cd6a578-5650-45a8-9428-4bcd67ee995b] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:8572f37a-ceab-4707-8195-55287126f4c6] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:03634710-1524-4d79-a633-35e49a6cac2b] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:4ea7f6f0-da40-403c-a54a-626deee23bdb] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:62635fd0-ed1e-4a88-86cc-7c3bb723c06f] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:e46733fd-daae-4569-93cd-9e9f17a95789] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:914e2bdd-5e75-4b62-a090-f49f9042aef0] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:f9c98ffd-5dad-4f07-a704-1f08e2201639] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:9aca0d37-cad1-4222-9271-d32548354268] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+[traceId:916bebe6-05a7-41e1-b695-33a314124e7d] Error creating board: NeonDbError: Error connecting to database: fetch failed
+    at execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1549:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Module.POST (file:///app/build/server/index.js:1462:21)
+    at async handler (file:///app/build/server/index.js:1682:22)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+    at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5)
+    at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17) {
+  severity: undefined,
+  code: undefined,
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined,
+  sourceError: TypeError: fetch failed
+      at node:internal/deps/undici/undici:14976:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async execute (file:///app/node_modules/@neondatabase/serverless/index.mjs:1548:15)
+      at async Module.POST (file:///app/build/server/index.js:1462:21)
+      at async handler (file:///app/build/server/index.js:1682:22)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async file:///app/node_modules/@hono/auth-js/dist/index.js:74:3
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async dispatch (file:///app/node_modules/hono/dist/compose.js:22:17)
+      at async contextStorage2 (file:///app/node_modules/hono/dist/middleware/context-storage/index.js:6:5) {
+    [cause]: Error: connect ECONNREFUSED 172.18.0.2:443
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+        at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '172.18.0.2',
+      port: 443
+    }
+  }
+}
+========================================
+[2026-05-07T09:47:20Z] Starting ViralBoard Web...
+NODE_ENV=production
+PORT=4000
+DATABASE_URL is set: yes
+========================================
+🚀 Server started on port 4000
+🌍 http://127.0.0.1:4000
+🏎️ Server started in 310ms

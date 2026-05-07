@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import type { Handler } from 'hono/types';
-import updatedFetch from '../src/__create/fetch';
+import updatedFetch from './fetch';
 
 const API_BASENAME = '/api';
 const api = new Hono();
